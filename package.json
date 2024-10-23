@@ -1,0 +1,85 @@
+{
+  "name": "@hyperce.io/superpreneurs",
+  "description": "Connect with like-minded entrepreneurs and unlock endless possibilities.",
+  "author": "Pukar Sharma <sharmapukar217@gmail.com>",
+  "sideEffects": false,
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "commit": "cz",
+    "dev": "nuxt dev",
+    "prepare": "husky",
+    "build": "nuxt build",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint --cache --fix .",
+    "format": "prettier -uw --cache --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "nuxt": "^3.13.2",
+    "vue": "latest",
+    "reka-ui": "^1.0.0-alpha.1",
+    "tailwind-merge": "^2.5.4",
+    "tailwind-variants": "^0.2.1",
+    "vue-router": "latest",
+    "vue3-star-ratings": "^3.0.5"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@nuxt/content": "^2.13.4",
+    "@nuxt/eslint": "^0.3.13",
+    "@nuxt/fonts": "^0.10.2",
+    "@nuxt/icon": "^1.5.6",
+    "@nuxthq/studio": "^2.1.1",
+    "@nuxtjs/color-mode": "^3.5.1",
+    "@nuxtjs/i18n": "^8.5.5",
+    "@nuxtjs/seo": "^2.0.0-rc.23",
+    "@tailwindcss/forms": "^0.5.9",
+    "@tailwindcss/vite": "^4.0.0-alpha.29",
+    "@total-typescript/ts-reset": "^0.5.1",
+    "@types/node": "^22.5.5",
+    "@vueuse/nuxt": "^11.1.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eruda": "^3.4.0",
+    "eslint": "^9.12.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "nuxt-graphql-client": "^0.2.36",
+    "tailwindcss": "^4.0.0-alpha.29",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.6.3",
+    "vue-tsc": "^2.1.6",
+    "wrangler": "^3.81.0"
+  },
+  "prettier": {
+    "semi": true,
+    "tabWidth": 2,
+    "printWidth": 90,
+    "bracketSameLine": true,
+    "trailingComma": "none"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,vue}": [
+      "prettier --write",
+      "eslint --fix --max-warnings=0"
+    ],
+    "**/*.{html,json,css,md,mdx}": [
+      "prettier -w"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

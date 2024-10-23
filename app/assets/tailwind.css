@@ -1,0 +1,184 @@
+@import "tailwindcss";
+
+@plugin "@tailwindcss/forms";
+@plugin "tailwindcss-animate";
+
+@theme {
+  --font-sans: "Dancing Script";
+  --radius-xl: calc(var(--radius-base) + 4px);
+  --radius-lg: var(--radius-base);
+  --radius-md: calc(var(--radius-base) - 2px);
+  --radius-sm: calc(var(--radius-base) - 4px);
+
+  --color-*: initial;
+
+  --color-ring: var(--color-ring);
+  --color-input: var(--color-input);
+  --color-border: var(--color-border);
+
+  --color-foreground: var(--color-foreground);
+  --color-background: var(--color-background);
+
+  --color-primary: var(--color-primary);
+  --color-primary-foreground: var(--color-primary-foreground);
+
+  --color-secondary: var(--color-secondary);
+  --color-secondary-foreground: var(--color-secondary-foreground);
+
+  --color-destructive: var(--color-destructive);
+  --color-destructive-foreground: var(--color-destructive-foreground);
+
+  --color-success: var(--color-success);
+  --color-success-foreground: var(--color-success-foreground);
+
+  --color-muted: var(--color-muted);
+  --color-muted-foreground: var(--color-muted-foreground);
+
+  --color-accent: var(--color-accent);
+  --color-accent-foreground: var(--color-accent-foreground);
+
+  --color-popover: var(--color-popover);
+  --color-popover-foreground: var(--color-popover-foreground);
+
+  --color-card: var(--color-card);
+  --color-card-foreground: var(--color-card-foreground);
+
+  --color-highlight: var(--color-highlight);
+  --color-highlight-foreground: var(--color-highlight-foreground);
+}
+
+@variant intersect (&:not([no-intersect]));
+
+@layer base {
+  :root {
+    --radius-base: 0.75rem;
+
+    --color-ring: #0a9379;
+    --color-input: #c7ced8;
+    --color-border: #d8dee6;
+
+    --color-background: #f5f5f8;
+    --color-foreground: #292b35;
+
+    --color-primary: #eab308;
+    --color-primary-foreground: #f6f7f9;
+
+    --color-secondary: #292b35;
+    --color-secondary-foreground: #fff;
+
+    --color-destructive: #ef4444;
+    --color-destructive-foreground: #fff;
+
+    --color-success: #39a561;
+    --color-success-foreground: #fff;
+
+    --color-muted: #f8fafc;
+    --color-muted-foreground: #64748b;
+
+    --color-accent: #ddddea;
+    --color-accent-foreground: #292b35;
+
+    --color-popover: #fff;
+    --color-popover-foreground: #292b35;
+
+    --color-card: #fff;
+    --color-card-foreground: #292b35;
+
+    --color-highlight: #e5a158;
+    --color-highlight-foreground: #fff;
+  }
+
+  .dark {
+    --color-ring: #48d3a0;
+    --color-input: #333741;
+    --color-border: #282c34;
+
+    --color-background: #12181d;
+    --color-foreground: #e9eef3;
+
+    --color-primary: #d1bf00;
+    --color-primary-foreground: #091521;
+
+    --color-secondary: #e9eef3;
+    --color-secondary-foreground: #091521;
+
+    --color-destructive: #ef4444;
+    --color-destructive-foreground: #fff;
+
+    --color-success: #39a561;
+    --color-success-foreground: #fff;
+
+    --color-muted: #020817;
+    --color-muted-foreground: #94a3b8;
+
+    --color-accent: #1e293b;
+    --color-accent-foreground: #f8fafc;
+
+    --color-popover: #0d1116;
+    --color-popover-foreground: #e9eef3;
+
+    --color-card: #0d1116;
+    --color-card-foreground: #e9eef3;
+
+    --color-highlight: #e5a158;
+    --color-highlight-foreground: #fff;
+  }
+
+  * {
+    box-sizing: border-box;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    /*    user-select: none;*/
+  }
+
+  html {
+    height: 100vh;
+    color-scheme: light dark;
+    overscroll-behavior: contain;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    overscroll-behavior: contain;
+    -webkit-text-size-adjust: 100%;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right)
+      env(safe-area-inset-bottom) env(safe-area-inset-left);
+
+    font-family: "Open Sans", sans-serif;
+    @apply antialiased bg-background relative min-h-screen max-w-full overflow-x-clip text-foreground size-full;
+  }
+
+  #__nuxt {
+    @apply contents;
+  }
+
+  input:-webkit-autofill {
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: rgb(var(--ui-foreground)) !important;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  input[type="file"]::file-selector-button {
+    display: none;
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply mx-auto px-8 max-w-7xl;
+  }
+}
