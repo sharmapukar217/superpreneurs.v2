@@ -1,3 +1,58 @@
 {
-  "title": ""
+  "meta": {
+    "title": "Homepage"
+  },
+  "pageData": {
+    "hero": {
+      "title": "Welcome to the Exclusive <span class='text-primary'>Club of Entrepreneurs</span>",
+      "description": "Connect with like-minded entrepreneurs to unlock new opportunities. Collaborate, grow, and reach greater heights together.",
+      "ratings": {
+        "disabled": false
+      },
+      "actions": [
+        {
+          "label": "Get Started",
+          "href": "/",
+          "size": "xl",
+          "leadingIcon": "i-lucide-rocket"
+        },
+        {
+          "label": "Learn More",
+          "href": "/",
+          "size": "xl",
+          "variant": "inverted",
+          "trailingIcon": "i-lucide-arrow-right",
+          "trailingIconClass": "group-hover:translate-x-1 transition-all"
+        }
+      ]
+    },
+    "discover": {
+      "title": "Discover <br/>Exclusive <span class='text-primary'>Events & Masterclasses</span>",
+      "description": "Elevate Your Journey with Supreneur: Discover Exclusive Events and Masterclasses.",
+      "features": [
+        {
+          "icon": "devicon-plain:networkx",
+          "title": "Expand Your Knowledge and Network",
+          "description": "Join our club to access a wide range of events and masterclasses designed for entrepreneurs like you."
+        },
+
+        {
+          "icon": "mdi:brain",
+          "title": "Connect with Like-Minded Entrepreneurs",
+          "description": "Build valuable connections and grow your network through our community of successful entrepreneurs."
+        },
+
+        {
+          "icon": "mdi:tools",
+          "title": "Unlock Exclusive Resources and Tools",
+          "description": "Gain access to a wide range of resources and tools to support your entrepreneurial journey."
+        }
+      ],
+      "classes": {
+        "title": "intersect-once motion-safe:md:intersect:animate-fade-in-right",
+        "description": "intersect-once motion-safe:md:intersect:animate-fade-in-right",
+        "featureGrid": "intersect-once motion-safe:intersect:animate-fade-in-right"
+      }
+    }
+  }
 }

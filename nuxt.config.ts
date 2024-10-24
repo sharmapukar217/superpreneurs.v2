@@ -38,7 +38,8 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxtjs/color-mode",
 
-    // for content
+    // for content and seo
+    "@nuxtjs/seo",
     "@nuxtjs/i18n",
     "@nuxt/content",
     "nuxt-graphql-client",
@@ -67,6 +68,7 @@ export default defineNuxtConfig({
     }
   },
   content: {
+    documentDriven: true,
     ignores: ["translation.json"],
     sources: {
       content: {

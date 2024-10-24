@@ -1,17 +1,20 @@
 <template>
   <ConfigProvider :use-id="() => useId()" :locale="$i18n.locale">
-    <NuxtRouteAnnouncer />
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
+    <TooltipProvider>
+      <ToastProvider>
+        <NuxtRouteAnnouncer />
+        <NuxtLoadingIndicator />
+        <NuxtLayout>
+          <NuxtPage />
+        </NuxtLayout>
+      </ToastProvider>
+    </TooltipProvider>
   </ConfigProvider>
 </template>
 
 <script setup lang="ts">
 import "~/assets/tailwind.css";
-
-import { ConfigProvider } from "reka-ui";
-import { SITE_CONFIG } from "~/content/config";
+import { ConfigProvider, TooltipProvider, ToastProvider } from "reka-ui";
 
 useSeoMeta({
   title: "Welcome",

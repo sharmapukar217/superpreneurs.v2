@@ -1,7 +1,10 @@
 @import "tailwindcss";
-
 @plugin "@tailwindcss/forms";
 @plugin "tailwindcss-animate";
+@plugin "tailwindcss-animated";
+
+@source "../content/**";
+@variant intersect (&:not([no-intersect]));
 
 @theme {
   --font-sans: "Dancing Script";
@@ -45,13 +48,26 @@
 
   --color-highlight: var(--color-highlight);
   --color-highlight-foreground: var(--color-highlight-foreground);
-}
 
-@variant intersect (&:not([no-intersect]));
+  /* keyframes */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: "translateY(2rem)";
+    }
+    to {
+      opacity: 1;
+      transform: "translateY(0)";
+    }
+  }
+
+  /* animations */
+  --animate-fade-in-up: fadeInUp 1s both;
+}
 
 @layer base {
   :root {
-    --radius-base: 0.75rem;
+    --radius-base: 0.5rem;
 
     --color-ring: #0a9379;
     --color-input: #c7ced8;

@@ -1,3 +1,56 @@
 {
-  "title": ""
+  "meta": {
+    "title": "मुख्य पृष्ठ"
+  },
+  "pageData": {
+    "hero": {
+      "title": "स्वागत छ <span class='text-primary'>उद्यमीहरूको विशेष क्लब</span> मा",
+      "description": "उस्तै सोच भएका उद्यमीहरूलाई जगेर्ना गरेर नयाँ अवसरहरूको खोजी गर्नुहोस्। सहकार्य गर्नुहोस्, बढ्नुहोस्, र सँगै उच्च लक्ष्यहरू हासिल गर्नुहोस्।",
+      "ratings": {
+        "disabled": false
+      },
+      "actions": [
+        {
+          "label": "सुरु गर्नुहोस्",
+          "href": "/",
+          "size": "xl",
+          "leadingIcon": "i-lucide-rocket"
+        },
+        {
+          "label": "थप जान्नुहोस्",
+          "href": "/",
+          "size": "xl",
+          "variant": "inverted",
+          "trailingIcon": "i-lucide-arrow-right",
+          "trailingIconClass": "group-hover:translate-x-1 transition-all"
+        }
+      ]
+    },
+    "discover": {
+      "title": "खोज्नुहोस् <br/>विशेष <span class='text-primary'>कार्यक्रम र मास्टरक्लासहरू</span>",
+      "description": "Supreneur सँग आफ्नो यात्रा अगाडि बढाउनुहोस्: विशेष कार्यक्रम र मास्टरक्लासहरू पत्ता लगाउनुहोस्।",
+      "features": [
+        {
+          "icon": "devicon-plain:networkx",
+          "title": "आफ्नो ज्ञान र नेटवर्क विस्तार गर्नुहोस्",
+          "description": "हाम्रो क्लबमा सामेल हुनुहोस् र उद्यमीहरूको लागि तयार पारिएका विभिन्न कार्यक्रम र मास्टरक्लासहरूमा सहभागी हुनुहोस्।"
+        },
+        {
+          "icon": "mdi:brain",
+          "title": "उस्तै सोच भएका उद्यमीहरूसँग जडान गर्नुहोस्",
+          "description": "हाम्रो सफल उद्यमीहरूको समुदायको माध्यमबाट मूल्यवान सम्बन्धहरू निर्माण गर्नुहोस् र आफ्नो नेटवर्क विस्तार गर्नुहोस्।"
+        },
+        {
+          "icon": "mdi:tools",
+          "title": "विशेष स्रोतहरू र उपकरणहरूको पहुँच प्राप्त गर्नुहोस्",
+          "description": "आफ्नो उद्यमशील यात्रा समर्थन गर्नको लागि विभिन्न स्रोतहरू र उपकरणहरूको पहुँच प्राप्त गर्नुहोस्।"
+        }
+      ],
+      "classes": {
+        "title": "motion-safe:md:intersect:animate-fade-in-up",
+        "description": "motion-safe:md:intersect:animate-fade-in-up",
+        "featureGrid": "motion-safe:intersect:animate-fade-in-right"
+      }
+    }
+  }
 }
