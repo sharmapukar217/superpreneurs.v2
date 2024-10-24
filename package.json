@@ -2,6 +2,7 @@
   "name": "@hyperce.io/superpreneurs",
   "description": "Connect with like-minded entrepreneurs and unlock endless possibilities.",
   "author": "Pukar Sharma <sharmapukar217@gmail.com>",
+  "packageManager": "pnpm",
   "sideEffects": false,
   "version": "0.1.0",
   "type": "module",
